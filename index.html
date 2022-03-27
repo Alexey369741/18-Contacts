@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer type="module"></script>
+</head>
+
+<body>
+    <form id="contactForm">
+        <table>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Телефон</th>
+                <th>Действия</th>
+            </tr>
+
+            <tbody id="contactListEl">
+
+            </tbody>
+
+            <tr>
+                <td><input type="text" name="firstName" id="nameInput" class="formInput" /></td>
+                <td><input type="text" name="lastName" id="surnameInput" class="formInput" /></td>
+                <td><input type="text" name="phone" id="phoneInput" class="formInput" /></td>
+                <td><button id="addContactBtn">Создать контакт</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script id="contactItemTemplate" type="text/template">
+            <tr data-id="{{id}}" class="contactItemSelector">
+              <td>{{firstName}}</td>
+              <td>{{lastName}}</td>
+              <td>{{phone}}</td>
+              <td>
+                <button type="button" class="editBtnClass">Edit</button>
+                <button type="button" class="deleteBtnClass">Delete</button>
+              </td>
+            </tr>
+          </script>
+</body>
+
+</html>
